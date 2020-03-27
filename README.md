@@ -1,2 +1,1 @@
-# Comeet
-Simple Client Server Chat
+![Comeet](./docs/comeet_logo.png)
