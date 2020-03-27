@@ -19,8 +19,8 @@ if __name__ == "__main__":
 	# Elenco per tenere traccia dei socket descriptors
 	connected_list = []
 	buffer = 4096
-	port = 6005
-	ip = 'localhost'
+	port = 6005  # you can change the port to the one you want
+	ip = 'localhost' # you can change the ip to the one you want
 
 	server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
