@@ -22,7 +22,7 @@ python server.py
 Suppose your script is in "Z:\code\hw01\server.py"
 
 1) Open Command line:  Start menu -> Run  and type cmd
-2) Type:  C:\python27\python.exe Z:\code\hw01\server.py
+2) Type:  ```C:\python27\python.exe Z:\code\hw01\server.py```
 > **Tip:** Or if your system is configured correctly, you can drag and drop your script from Explorer onto the Command Line window and press enter.
 #### macOS
 
@@ -36,12 +36,18 @@ python server.py
 ### How to run client.py?
 
 > **Tip:** For each client that connects use a different username
-#### Linux, Windows, macOS
+
 To execute client.py repeat the same procedure, only changing "server.py" to "client.py".
 Type this:
+### Linux, macOS
 ```Bash
 python client.py
 ```
+### Windows
+```Bash
+C:\python27\python.exe Z:\code\hw01\server.py
+```
+
 
 
 
