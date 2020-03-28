@@ -45,7 +45,7 @@ python client.py
 ```
 #### Windows
 ```Bash
-C:\python27\python.exe Z:\code\hw01\server.py
+C:\python27\python.exe Z:\code\hw01\client.py
 ```
 
 
