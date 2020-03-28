@@ -32,3 +32,18 @@ Suppose your script is in "Z:\code\hw01\server.py"
 ```Bash
 python server.py
 ```
+
+### How to run client.py?
+
+> **Tip:** For each client that connects use a different username
+#### Linux, Windows, macOS
+To execute client.py repeat the same procedure, only changing "server.py" to "client.py".
+Type this:
+```Bash
+python client.py
+```
+
+
+
+
+
