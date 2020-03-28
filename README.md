@@ -39,11 +39,11 @@ python server.py
 
 To execute client.py repeat the same procedure, only changing "server.py" to "client.py".
 Type this:
-### Linux, macOS
+#### Linux, macOS
 ```Bash
 python client.py
 ```
-### Windows
+#### Windows
 ```Bash
 C:\python27\python.exe Z:\code\hw01\server.py
 ```
