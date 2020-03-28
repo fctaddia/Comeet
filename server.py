@@ -56,7 +56,7 @@ if __name__ == "__main__":
                     #aggiungi nome e indirizzo
 					record[addr]=name
 					print ("Client (%s, %s) online" % addr," [",record[addr],"]")
-					sockfd.send("\33[32m\r\33[1m Benvenuto nella Tchat. Inserisci 'tadda' in qualsiasi momento per uscire\n\33[0m")
+					sockfd.send("\33[32m\r\33[1m Comeet ti da il benvenuto. Inserisci 'tadda' in qualsiasi momento per uscire\n\33[0m")
 					send_to_all(sockfd, "\33[32m\33[1m\r "+name+" si e unito alla conversazione \n\33[0m")
 
 			#Alcuni messaggi in arrivo da un client
