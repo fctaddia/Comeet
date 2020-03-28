@@ -19,12 +19,11 @@ if __name__ == "__main__":
 	# Elenco per tenere traccia dei socket descriptors
 	connected_list = []
 	buffer = 4096
-	port = 6005  # you can change the port to the one you want
-	ip = 'localhost' # you can change the ip to the one you want
+	port = 6005
 
 	server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-	server_socket.bind((ip, port))
+	server_socket.bind(("localhost", port))
 	server_socket.listen(10) # ascolta almeno 10 connessioni contemporaneamente
 
 	# Aggiungi server socket all'elenco delle connessioni leggibili
@@ -44,10 +43,10 @@ if __name__ == "__main__":
 				name=sockfd.recv(buffer)
 				connected_list.append(sockfd)
 				record[addr]=""
-				#print ("record and conn list ",record,connected_list)
+				#print "record and conn list ",record,connected_list
                 
                 #se ripetuto lo username
-				if name in list(record.values()):
+				if name in record.values():
 					sockfd.send("\r\33[31m\33[1m Username gia in uso!\n\33[0m")
 					del record[addr]
 					connected_list.remove(sockfd)
@@ -56,7 +55,7 @@ if __name__ == "__main__":
 				else:
                     #aggiungi nome e indirizzo
 					record[addr]=name
-					print(("Client (%s, %s) online" % addr," [",record[addr],"]"))
+					print ("Client (%s, %s) online" % addr," [",record[addr],"]")
 					sockfd.send("\33[32m\r\33[1m Benvenuto nella Tchat. Inserisci 'tadda' in qualsiasi momento per uscire\n\33[0m")
 					send_to_all(sockfd, "\33[32m\33[1m\r "+name+" si e unito alla conversazione \n\33[0m")
 
@@ -65,16 +64,16 @@ if __name__ == "__main__":
 				# Data da client
 				try:
 					data1 = sock.recv(buffer)
-					#print ("sock is: ",sock)
+					#print "sock is: ",sock
 					data=data1[:data1.index("\n")]
-					#print(("\ndata received: ",data))
+					#print "\ndata received: ",data
                     
 				#get indirizzo del client che invia il messaggio
 					i,p=sock.getpeername()
 					if data == "tadda":
 						msg="\r\33[1m"+"\33[31m "+record[(i,p)]+" ha lasciato la conversazione \33[0m\n"
 						send_to_all(sock,msg)
-						print(("Client (%s, %s) e offline" % (i,p)," [",record[(i,p)],"]"))
+						print ("Client (%s, %s) e offline" % (i,p)," [",record[(i,p)],"]")
 						del record[(i,p)]
 						connected_list.remove(sock)
 						sock.close()
@@ -88,11 +87,10 @@ if __name__ == "__main__":
 				except:
 					(i,p)=sock.getpeername()
 					send_to_all(sock, "\r\33[31m \33[1m"+record[(i,p)]+" ha lasciato la conversazione inaspettatamente\33[0m\n")
-					print(("Client (%s, %s) e offline (errore)" % (i,p)," [",record[(i,p)],"]\n"))
+					print ("Client (%s, %s) e offline (errore)" % (i,p)," [",record[(i,p)],"]\n")
 					del record[(i,p)]
 					connected_list.remove(sock)
 					sock.close()
 					continue
 
 	server_socket.close()
-
