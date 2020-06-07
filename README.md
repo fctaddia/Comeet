@@ -5,6 +5,7 @@ Simple Client Server Chat
 
 [![Python](https://img.shields.io/badge/Python-2.7-000.svg?style=flat-square)](https://www.python.org)
 [![GitHub (pre-)release](https://img.shields.io/github/v/release/fctaddia/comeet.svg?color=000&include_prereleases&label=Release&style=flat-square)](./../../releases)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/24a24913f2d945c7903495704027680a)](https://www.codacy.com/manual/fctaddia/Comeet?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=fctaddia/Comeet&amp;utm_campaign=Badge_Grade)
 
 Comet gives the possibility to create a simple chat client server. Where you will have the opportunity to better understand the functioning of a tcp connection, so that you can develop a more complex chat.
 
