@@ -12,6 +12,7 @@ Comet gives the possibility to create a simple chat client server. Where you wil
 ### How to run server.py?
 
 > **Tip:** You can run server.py on a raspberry pi so as to really simulate the communication between client and server
+
 > **Tip:** Change the ip and port in server.py
 #### Linux
 Open the terminal, go to the directory where you saved server.py. Then to run server.py type this:
